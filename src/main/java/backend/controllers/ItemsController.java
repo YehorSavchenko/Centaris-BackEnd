@@ -33,14 +33,14 @@ public class ItemsController {
 
     @GetMapping("/items/get/district/{district}")
     public ItemList getAllItemsForDistrict(@PathVariable String district) {
-        ItemList allItems = new ItemList(itemService.getAllItems());
+        ItemList allItems = new ItemList(itemService.getItemsByDistrict(district));
         LOGGER.info("Found following items: {}", allItems);
         return allItems;
     }
 
     @GetMapping("/items/get/category/{category}")
     public ItemList getAllItemsForCategory(@PathVariable String category) {
-        ItemList allItems = new ItemList(itemService.getAllItems());
+        ItemList allItems = new ItemList(itemService.getItemsByCategory(category));
         LOGGER.info("Found following items: {}", allItems);
         return allItems;
     }
@@ -48,7 +48,7 @@ public class ItemsController {
     @GetMapping("/items/get/categoryanddistrict/{category}&{district}")
     public ItemList getAllItemsForDistrictAndCategory(@PathVariable String category,
                                                       @PathVariable String district) {
-        ItemList allItems = new ItemList(itemService.getAllItems());
+        ItemList allItems = new ItemList(itemService.getItemsByCategoryAndDistrict(category, district));
         LOGGER.info("Found following items: {}", allItems);
         return allItems;
     }

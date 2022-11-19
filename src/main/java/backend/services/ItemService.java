@@ -31,4 +31,16 @@ public class ItemService {
     public List<Item> getAllItems(){
         return itemRepository.findAll();
     }
+
+    public List<Item> getItemsByDistrict(String district) {
+        return itemRepository.getItemsByDistrict(district);
+    }
+
+    public List<Item> getItemsByCategory(String category) {
+        return itemRepository.getItemsByCategory(category);
+    }
+
+    public List<Item> getItemsByCategoryAndDistrict(String category, String district) {
+        return itemRepository.getItemsByCategoryAndDistrict(category, district);
+    }
 }
