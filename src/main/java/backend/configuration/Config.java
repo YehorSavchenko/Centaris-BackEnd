@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 import java.sql.*;
 
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -25,7 +26,7 @@ public class Config {
         when(resultSet.getString("name")).thenReturn("MockName");
         when(resultSet.getString("district")).thenReturn("MockDistrict");
         when(resultSet.getDate("createDate")).thenReturn(new Date(2022,10,10));
-        return mock(Connection.class);
+        return connection;
     }
 
 
