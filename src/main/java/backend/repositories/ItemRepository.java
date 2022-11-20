@@ -12,13 +12,13 @@ import java.util.List;
 @Repository
 public interface ItemRepository extends JpaRepository<Item, Long> {
 
-    @Query("SELECT * FROM items WHERE district=:district")
+    @Query("SELECT i FROM Item i WHERE i.district=:district")
     public List<Item> getItemsByDistrict(@Param("district") String district);
 
-    @Query("SELECT * FROM items WHERE category=:category")
+    @Query("SELECT i FROM Item i WHERE i.category=:category")
     public List<Item> getItemsByCategory(@Param("category") String category);
 
-    @Query("SELECT * FROM items WHERE category=:category AND district=:district")
+    @Query("SELECT i FROM Item i WHERE i.category=:category AND i.district=:district")
     public List<Item> getItemsByCategoryAndDistrict(@Param("category") String category,
                                                     @Param("district") String district);
 }
