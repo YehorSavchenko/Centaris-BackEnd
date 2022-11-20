@@ -26,11 +26,14 @@ public class ItemsController {
         this.imageService = imageService;
         File image = new File("static/images/yee.jpeg");
         itemService.addItem(new Item("toys", "dinosaur", "Cracow, Wawel Castle",
-                LocalDateTime.now(), "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvPY9kkWxePK9SD7mjhz8_KUsBlKwxCMhe_jp0w0iGiA&s"));
+                LocalDateTime.now(), "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvPY9kkWxePK9SD7mjhz8_KUsBlKwxCMhe_jp0w0iGiA&s",
+                "yee"));
         itemService.addItem(new Item("book", "Alice in Wonderland", "Cracow, Nowa Huta",
-                LocalDateTime.now(), "https://a.allegroimg.com/s1024/0c4a9f/d14ac7bb4f8aabce0751df838d3b"));
+                LocalDateTime.now(), "https://a.allegroimg.com/s1024/0c4a9f/d14ac7bb4f8aabce0751df838d3b",
+                "A book. You can read it. Or not. Might be decent"));
         itemService.addItem(new Item("clothes", "dress", "Cracow, Kazimierz",
-                LocalDateTime.now(), "https://i.ebayimg.com/00/s/ODAwWDYwMA==/z/v6sAAOSw3ldjOpsX/$_86.PNG"));
+                LocalDateTime.now(), "https://i.ebayimg.com/00/s/ODAwWDYwMA==/z/v6sAAOSw3ldjOpsX/$_86.PNG",
+                "yep, the picture is stolen from some random site. So what?"));
         LOGGER.info("Initialized item controller");
     }
 
