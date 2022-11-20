@@ -2,6 +2,8 @@
 Project for HackYeah2022 BackEnd
 
 ## Repositories:
+Need to download following repos for other components of the application:
+
 Model: https://github.com/YehorSavchenko/Centaris-Model
 
 Front-end: https://github.com/YehorSavchenko/Centaris-Front
