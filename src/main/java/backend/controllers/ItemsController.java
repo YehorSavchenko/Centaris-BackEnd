@@ -24,8 +24,13 @@ public class ItemsController {
     public ItemsController(ItemService itemService, ImageService imageService) {
         this.itemService = itemService;
         this.imageService = imageService;
-        File image = new File("imagesToDownload/yee.jpeg");
-        itemService.addItem(new Item(7L, "ddd", "huhadk", "fgsjfsjfh", LocalDateTime.now(), image.getAbsolutePath()));
+        File image = new File("static/images/yee.jpeg");
+        itemService.addItem(new Item("toys", "dinosaur", "Cracow, Wawel Castle",
+                LocalDateTime.now(), "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvPY9kkWxePK9SD7mjhz8_KUsBlKwxCMhe_jp0w0iGiA&s"));
+        itemService.addItem(new Item("book", "Alice in Wonderland", "Cracow, Nowa Huta",
+                LocalDateTime.now(), "https://a.allegroimg.com/s1024/0c4a9f/d14ac7bb4f8aabce0751df838d3b"));
+        itemService.addItem(new Item("clothes", "dress", "Cracow, Kazimierz",
+                LocalDateTime.now(), "https://i.ebayimg.com/00/s/ODAwWDYwMA==/z/v6sAAOSw3ldjOpsX/$_86.PNG"));
         LOGGER.info("Initialized item controller");
     }
 
