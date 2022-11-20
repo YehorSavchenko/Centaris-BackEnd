@@ -21,4 +21,5 @@ public interface ItemRepository extends JpaRepository<Item, Long> {
     @Query("SELECT i FROM Item i WHERE i.category=:category AND i.district=:district")
     public List<Item> getItemsByCategoryAndDistrict(@Param("category") String category,
                                                     @Param("district") String district);
+
 }

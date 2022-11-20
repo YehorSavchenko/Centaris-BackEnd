@@ -38,6 +38,10 @@ public class ItemsController {
     }
 
 
+    @GetMapping("/items/get/{id}")
+    public Item getItemById(@PathVariable Long id) {
+        return itemService.getItemById(id);
+    }
     @GetMapping("/items/get/all")
     public ItemList getAllItems() {
         LOGGER.info("request received");

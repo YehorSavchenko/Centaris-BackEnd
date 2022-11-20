@@ -28,6 +28,10 @@ public class ItemService {
         return itemRepository.saveAll(items);
     }
 
+    public Item getItemById(Long id) {
+        return itemRepository.getReferenceById(id);
+    }
+
     public List<Item> getAllItems(){
         return itemRepository.findAll();
     }
