@@ -24,7 +24,6 @@ public class ItemsController {
     public ItemsController(ItemService itemService, ImageService imageService) {
         this.itemService = itemService;
         this.imageService = imageService;
-        File image = new File("static/images/yee.jpeg");
         itemService.addItem(new Item("toys", "dinosaur", "Cracow, Wawel Castle",
                 LocalDateTime.now(), "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvPY9kkWxePK9SD7mjhz8_KUsBlKwxCMhe_jp0w0iGiA&s",
                 "yee"));

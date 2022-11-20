@@ -18,7 +18,7 @@ public class ItemService {
         this.itemRepository = itemRepository;
     }
 
-    public Item addItem(Item item){
+    public Item addItem(Item item) {
         logger.info("Saving {}", item);
         return itemRepository.save(item);
     }
@@ -29,10 +29,10 @@ public class ItemService {
     }
 
     public Item getItemById(Long id) {
-        return itemRepository.getReferenceById(id);
+        return itemRepository.findById(id).orElseThrow();
     }
 
-    public List<Item> getAllItems(){
+    public List<Item> getAllItems() {
         return itemRepository.findAll();
     }
 
