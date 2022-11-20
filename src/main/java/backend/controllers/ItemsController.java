@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.File;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -23,7 +24,8 @@ public class ItemsController {
     public ItemsController(ItemService itemService, ImageService imageService) {
         this.itemService = itemService;
         this.imageService = imageService;
-        itemService.addItem(new Item(7L, "ddd", "huhadk", "fgsjfsjfh", LocalDateTime.now()));
+        File image = new File("imagesToDownload/yee.jpeg");
+        itemService.addItem(new Item(7L, "ddd", "huhadk", "fgsjfsjfh", LocalDateTime.now(), image.getAbsolutePath()));
         LOGGER.info("Initialized item controller");
     }
 
